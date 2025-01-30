@@ -2742,3 +2742,166 @@ Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
 2025-01-30T10:59:58.992Z DEBUG 1 --- [maz] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2025-01-30T10:59:58.993Z DEBUG 1 --- [maz] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[OrganizationDto(id=1, organizationAddress=12345678, contactInfo=HondaCivic, contactPerson=Mikhail,  (truncated)...]
 2025-01-30T10:59:58.994Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T10:59:59.705Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/organizations/list?page=1&size=10", parameters={masked}
+2025-01-30T10:59:59.706Z DEBUG 1 --- [maz] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.OrganizationController#getOrganizationsList()
+2025-01-30T10:59:59.709Z DEBUG 1 --- [maz] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T10:59:59.710Z DEBUG 1 --- [maz] [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [[OrganizationDto(id=1, organizationAddress=12345678, contactInfo=HondaCivic, contactPerson=Mikhail,  (truncated)...]
+2025-01-30T10:59:59.710Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:01.611Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/employees", parameters={}
+2025-01-30T11:00:01.612Z DEBUG 1 --- [maz] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.EmployeesController#getEmployeeListByOrganizationId(UserDetails)
+2025-01-30T11:00:01.618Z DEBUG 1 --- [maz] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:01.618Z DEBUG 1 --- [maz] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[EmployeesForm(email=newUser@gmail.com, organizationName=MAZ, role=ROLE_SUPERADMIN, name=Igor, phone (truncated)...]
+2025-01-30T11:00:01.619Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:01.739Z DEBUG 1 --- [maz] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/employees", parameters={}
+2025-01-30T11:00:01.739Z DEBUG 1 --- [maz] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.EmployeesController#getEmployeeListByOrganizationId(UserDetails)
+2025-01-30T11:00:01.742Z DEBUG 1 --- [maz] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:01.742Z DEBUG 1 --- [maz] [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [[EmployeesForm(email=newUser@gmail.com, organizationName=MAZ, role=ROLE_SUPERADMIN, name=Igor, phone (truncated)...]
+2025-01-30T11:00:01.743Z DEBUG 1 --- [maz] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:14.937Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:00:14.938Z DEBUG 1 --- [maz] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:00:14.944Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:14.944Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:00:14.945Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:14.986Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:00:14.986Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:00:14.988Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:00:14.996Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:00:14.997Z DEBUG 1 --- [maz] [nio-8080-exec-7] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=0e461d22-f4a6-717f-5bed-acf82a940e23, uri=ws://134.17.17.15:8080/ws]
+New client connected: 0e461d22-f4a6-717f-5bed-acf82a940e23
+2025-01-30T11:00:15.040Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:00:15.041Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:00:15.041Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:00:15.042Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:00:15.053Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:00:15.054Z DEBUG 1 --- [maz] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:00:15.055Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:15.056Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:00:15.057Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:15.058Z DEBUG 1 --- [maz] [nio-8080-exec-9] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=4bc026a6-3683-6513-6c67-83bd58983021, uri=ws://134.17.17.15:8080/ws]
+New client connected: 4bc026a6-3683-6513-6c67-83bd58983021
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:00:15.089Z  INFO 1 --- [maz] [nio-8080-exec-2] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:00:15.133Z  INFO 1 --- [maz] [nio-8080-exec-1] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+2025-01-30T11:00:23.348Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/transport/list-transport?page=1&size=10", parameters={masked}
+2025-01-30T11:00:23.349Z DEBUG 1 --- [maz] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.TransportController#getListTransports()
+2025-01-30T11:00:23.353Z DEBUG 1 --- [maz] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:23.353Z DEBUG 1 --- [maz] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[TransportDto(id=123456111ABCDEFGH, model=Bus Model X         , yearRelease=2020-01-01 00:00:00.0, t (truncated)...]
+2025-01-30T11:00:23.355Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:23.954Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:00:23.955Z DEBUG 1 --- [maz] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:00:23.956Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:23.957Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:00:23.957Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:23.987Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:00:23.988Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:00:23.988Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:00:23.989Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:00:23.992Z DEBUG 1 --- [maz] [nio-8080-exec-7] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=79ea9714-aaef-1cc6-54bd-b194de35fd1c, uri=ws://134.17.17.15:8080/ws]
+New client connected: 79ea9714-aaef-1cc6-54bd-b194de35fd1c
+2025-01-30T11:00:24.014Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:00:24.014Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:00:24.014Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:00:24.014Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:00:24.015Z DEBUG 1 --- [maz] [nio-8080-exec-4] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=6eb31528-1de5-cd6f-89e1-ef3bd1f3fe57, uri=ws://134.17.17.15:8080/ws]
+New client connected: 6eb31528-1de5-cd6f-89e1-ef3bd1f3fe57
+2025-01-30T11:00:24.613Z DEBUG 1 --- [maz] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/transport/list-transport?page=1&size=10", parameters={masked}
+2025-01-30T11:00:24.614Z DEBUG 1 --- [maz] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.TransportController#getListTransports()
+2025-01-30T11:00:24.616Z DEBUG 1 --- [maz] [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:24.616Z DEBUG 1 --- [maz] [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[TransportDto(id=123456111ABCDEFGH, model=Bus Model X         , yearRelease=2020-01-01 00:00:00.0, t (truncated)...]
+2025-01-30T11:00:24.617Z DEBUG 1 --- [maz] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:25.305Z DEBUG 1 --- [maz] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:00:25.306Z DEBUG 1 --- [maz] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:00:25.308Z DEBUG 1 --- [maz] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:25.308Z DEBUG 1 --- [maz] [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:00:25.309Z DEBUG 1 --- [maz] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:00:25.344Z  INFO 1 --- [maz] [nio-8080-exec-5] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:00:25.384Z  INFO 1 --- [maz] [nio-8080-exec-3] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+2025-01-30T11:00:31.974Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:00:31.975Z DEBUG 1 --- [maz] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:00:31.978Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:31.978Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:00:31.979Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:32.033Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:00:32.033Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:00:32.033Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:00:32.034Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:00:32.035Z DEBUG 1 --- [maz] [nio-8080-exec-9] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=f4bb4483-4e2c-8c4d-bc0f-21d4bc0f52b8, uri=ws://134.17.17.15:8080/ws]
+New client connected: f4bb4483-4e2c-8c4d-bc0f-21d4bc0f52b8
+2025-01-30T11:00:32.081Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:00:32.081Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:00:32.081Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:00:32.082Z DEBUG 1 --- [maz] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:00:32.083Z DEBUG 1 --- [maz] [nio-8080-exec-4] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=64df7e28-bde3-8741-1940-9f9f90a903d3, uri=ws://134.17.17.15:8080/ws]
+New client connected: 64df7e28-bde3-8741-1940-9f9f90a903d3
+2025-01-30T11:00:32.147Z DEBUG 1 --- [maz] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:00:32.147Z DEBUG 1 --- [maz] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:00:32.149Z DEBUG 1 --- [maz] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:32.149Z DEBUG 1 --- [maz] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:00:32.150Z DEBUG 1 --- [maz] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:00:32.177Z  INFO 1 --- [maz] [nio-8080-exec-1] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:00:32.210Z  INFO 1 --- [maz] [nio-8080-exec-5] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+//////////////////////////////SCHEDULE END/////////////////////////////////
+2025-01-30T11:00:48.484Z DEBUG 1 --- [maz] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/transport/list-transport?page=1&size=10", parameters={masked}
+2025-01-30T11:00:48.486Z DEBUG 1 --- [maz] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.TransportController#getListTransports()
+2025-01-30T11:00:48.489Z DEBUG 1 --- [maz] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:48.489Z DEBUG 1 --- [maz] [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [[TransportDto(id=123456111ABCDEFGH, model=Bus Model X         , yearRelease=2020-01-01 00:00:00.0, t (truncated)...]
+2025-01-30T11:00:48.491Z DEBUG 1 --- [maz] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:00:50.449Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/transport/list-transport?page=1&size=10", parameters={masked}
+2025-01-30T11:00:50.450Z DEBUG 1 --- [maz] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.TransportController#getListTransports()
+2025-01-30T11:00:50.453Z DEBUG 1 --- [maz] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:00:50.454Z DEBUG 1 --- [maz] [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [[TransportDto(id=123456111ABCDEFGH, model=Bus Model X         , yearRelease=2020-01-01 00:00:00.0, t (truncated)...]
+2025-01-30T11:00:50.455Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:01:04.126Z DEBUG 1 --- [maz] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/transport/list-transport?page=1&size=10", parameters={masked}
+2025-01-30T11:01:04.126Z DEBUG 1 --- [maz] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.TransportController#getListTransports()
+2025-01-30T11:01:04.132Z DEBUG 1 --- [maz] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:01:04.132Z DEBUG 1 --- [maz] [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[TransportDto(id=123456111ABCDEFGH, model=Bus Model X         , yearRelease=2020-01-01 00:00:00.0, t (truncated)...]
+2025-01-30T11:01:04.133Z DEBUG 1 --- [maz] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:01:04.304Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/transport/list-transport?page=1&size=10", parameters={masked}
+2025-01-30T11:01:04.304Z DEBUG 1 --- [maz] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.TransportController#getListTransports()
+2025-01-30T11:01:04.307Z DEBUG 1 --- [maz] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:01:04.307Z DEBUG 1 --- [maz] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [[TransportDto(id=123456111ABCDEFGH, model=Bus Model X         , yearRelease=2020-01-01 00:00:00.0, t (truncated)...]
+2025-01-30T11:01:04.308Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:01:12.203Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:01:12.208Z DEBUG 1 --- [maz] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:01:12.211Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:01:12.211Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:01:12.212Z DEBUG 1 --- [maz] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:01:12.272Z DEBUG 1 --- [maz] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:01:12.272Z DEBUG 1 --- [maz] [nio-8080-exec-6] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:01:12.273Z DEBUG 1 --- [maz] [nio-8080-exec-6] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:01:12.274Z DEBUG 1 --- [maz] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:01:12.275Z DEBUG 1 --- [maz] [nio-8080-exec-6] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=8d22c682-c90e-4ed7-cd0a-b410d93aa3e7, uri=ws://134.17.17.15:8080/ws]
+New client connected: 8d22c682-c90e-4ed7-cd0a-b410d93aa3e7
+2025-01-30T11:01:12.276Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:01:12.276Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:01:12.276Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:01:12.277Z DEBUG 1 --- [maz] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:01:12.278Z DEBUG 1 --- [maz] [nio-8080-exec-7] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=d92cbd2f-f981-9a64-c8bf-bd1232cd1739, uri=ws://134.17.17.15:8080/ws]
+New client connected: d92cbd2f-f981-9a64-c8bf-bd1232cd1739
+2025-01-30T11:01:13.917Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:01:13.917Z DEBUG 1 --- [maz] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:01:13.918Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:01:13.919Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:01:13.920Z DEBUG 1 --- [maz] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:01:14.001Z  INFO 1 --- [maz] [nio-8080-exec-2] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:01:14.008Z  INFO 1 --- [maz] [nio-8080-exec-4] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
+2025-01-30T11:01:25.924Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/main/roles", parameters={}
+2025-01-30T11:01:25.925Z DEBUG 1 --- [maz] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.maz.controllers.MainController#getRoleCounts()
+2025-01-30T11:01:25.928Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-01-30T11:01:25.928Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleCount(organizationName=MAZ, superAdmins=1, operators=0, managers=0, admins=1, manufactorers=0,  (truncated)...]
+2025-01-30T11:01:25.930Z DEBUG 1 --- [maz] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-01-30T11:01:25.991Z DEBUG 1 --- [maz] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/ws", parameters={}
+2025-01-30T11:01:25.992Z DEBUG 1 --- [maz] [io-8080-exec-10] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6880c06b
+2025-01-30T11:01:25.992Z DEBUG 1 --- [maz] [io-8080-exec-10] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2025-01-30T11:01:25.995Z DEBUG 1 --- [maz] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 101 SWITCHING_PROTOCOLS
+2025-01-30T11:01:25.997Z DEBUG 1 --- [maz] [io-8080-exec-10] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=b2af4b2c-99c0-6bc8-c3b6-27dbfba3ed5a, uri=ws://134.17.17.15:8080/ws]
+New client connected: b2af4b2c-99c0-6bc8-c3b6-27dbfba3ed5a
+Received message: {"messageType":"mainVehicle","token":"your-jwt-token-here"}
+2025-01-30T11:01:26.139Z  INFO 1 --- [maz] [nio-8080-exec-3] com.maz.webSocket.MyWebSocketHandler     : Parsed WebSocketRequest: WebSocketRequest(isStart=null, messageType=mainVehicle, pageNumber=0, token=your-jwt-token-here, transportVin=null)
