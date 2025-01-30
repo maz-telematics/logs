@@ -1,0 +1,200 @@
+05:35:08.325 [main] INFO com.example.socket.SocketApplication -- version = 1.0
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-01-30T05:35:10.769Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Starting SocketApplication v0.0.1-SNAPSHOT using Java 22 with PID 1 (/app/app.jar started by root in /app)
+2025-01-30T05:35:10.775Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-30T05:35:13.295Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-30T05:35:13.791Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 464 ms. Found 11 JPA repository interfaces.
+2025-01-30T05:35:14.000Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-01-30T05:35:14.032Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-01-30T05:35:15.804Z  INFO 1 --- [socket] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-30T05:35:16.019Z  INFO 1 --- [socket] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-30T05:35:16.137Z  INFO 1 --- [socket] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-30T05:35:16.938Z  INFO 1 --- [socket] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-30T05:35:17.000Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-30T05:35:18.002Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fa0ee7e
+2025-01-30T05:35:18.004Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-30T05:35:18.342Z  WARN 1 --- [socket] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-30T05:35:21.342Z  INFO 1 --- [socket] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-30T05:35:21.345Z  INFO 1 --- [socket] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:35:24.720Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:35:24.728Z  INFO 1 --- [socket] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 1 subscriber(s).
+2025-01-30T05:35:24.728Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:35:24.738Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:35:24.743Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:35:24.743Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 1 subscriber(s).
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 1 subscriber(s).
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.746Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:35:24.746Z  INFO 1 --- [socket] [           main] o.s.i.ip.tcp.TcpInboundGateway           : started bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.744Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082 Listening
+2025-01-30T05:35:24.782Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Started SocketApplication in 15.998 seconds (process running for 18.71)
+2025-01-30T05:42:29.808Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : Server Socket closed
+2025-01-30T05:42:29.825Z  INFO 1 --- [socket] [ionShutdownHook] .s.i.i.t.c.TcpNetServerConnectionFactory : stopped bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:42:29.829Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.ip.tcp.TcpInboundGateway           : stopped bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.847Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:42:29.850Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 0 subscriber(s).
+2025-01-30T05:42:29.861Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.864Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 0 subscriber(s).
+2025-01-30T05:42:29.864Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.865Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:42:29.874Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 0 subscriber(s).
+2025-01-30T05:42:29.884Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:42:29.946Z  INFO 1 --- [socket] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:42:29.977Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-30T05:42:30.001Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+05:45:21.935 [main] INFO com.example.socket.SocketApplication -- version = 1.0
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-01-30T05:45:25.322Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Starting SocketApplication v0.0.1-SNAPSHOT using Java 22 with PID 1 (/app/app.jar started by root in /app)
+2025-01-30T05:45:25.328Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-30T05:45:28.685Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-30T05:45:29.155Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 444 ms. Found 11 JPA repository interfaces.
+2025-01-30T05:45:29.341Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-01-30T05:45:29.359Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-01-30T05:45:30.749Z  INFO 1 --- [socket] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-30T05:45:30.934Z  INFO 1 --- [socket] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-30T05:45:31.023Z  INFO 1 --- [socket] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-30T05:45:31.836Z  INFO 1 --- [socket] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-30T05:45:31.912Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-30T05:45:32.688Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@202f054f
+2025-01-30T05:45:32.690Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-30T05:45:32.856Z  WARN 1 --- [socket] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-30T05:45:36.156Z  INFO 1 --- [socket] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-30T05:45:36.163Z  INFO 1 --- [socket] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:45:39.509Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:45:39.511Z  INFO 1 --- [socket] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 1 subscriber(s).
+2025-01-30T05:45:39.512Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:45:39.521Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082 Listening
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 1 subscriber(s).
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 1 subscriber(s).
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] o.s.i.ip.tcp.TcpInboundGateway           : started bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.555Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Started SocketApplication in 16.979 seconds (process running for 20.304)
+2025-01-30T06:18:19.942Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T06:18:19.955Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 139.99.35.41:33291:8082:780d1108-1d56-4f74-8038-901e37063924 IOException:Incomplete message. Expected 12609 more bytes, but got 247
+2025-01-30T08:16:44.204Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA03032730
+2025-01-30T08:16:44.222Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.85:57430:8082:9390cb57-3dbd-40ec-b4a5-91379033df80 IOException:Incomplete message. Expected 10051 more bytes, but got 230
+2025-01-30T08:16:44.692Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:16030100CA010000C6030380D7
+2025-01-30T08:16:44.693Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.85:57440:8082:2de7b621-1077-452b-90b5-9a1a723f6d7e IOException:Incomplete message. Expected 33002 more bytes, but got 194
+05:35:08.325 [main] INFO com.example.socket.SocketApplication -- version = 1.0
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-01-30T05:35:10.769Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Starting SocketApplication v0.0.1-SNAPSHOT using Java 22 with PID 1 (/app/app.jar started by root in /app)
+2025-01-30T05:35:10.775Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-30T05:35:13.295Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-30T05:35:13.791Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 464 ms. Found 11 JPA repository interfaces.
+2025-01-30T05:35:14.000Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-01-30T05:35:14.032Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-01-30T05:35:15.804Z  INFO 1 --- [socket] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-30T05:35:16.019Z  INFO 1 --- [socket] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-30T05:35:16.137Z  INFO 1 --- [socket] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-30T05:35:16.938Z  INFO 1 --- [socket] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-30T05:35:17.000Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-30T05:35:18.002Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fa0ee7e
+2025-01-30T05:35:18.004Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-30T05:35:18.342Z  WARN 1 --- [socket] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-30T05:35:21.342Z  INFO 1 --- [socket] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-30T05:35:21.345Z  INFO 1 --- [socket] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:35:24.720Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:35:24.728Z  INFO 1 --- [socket] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 1 subscriber(s).
+2025-01-30T05:35:24.728Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:35:24.738Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:35:24.743Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:35:24.743Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 1 subscriber(s).
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 1 subscriber(s).
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.746Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:35:24.746Z  INFO 1 --- [socket] [           main] o.s.i.ip.tcp.TcpInboundGateway           : started bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.744Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082 Listening
+2025-01-30T05:35:24.782Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Started SocketApplication in 15.998 seconds (process running for 18.71)
+2025-01-30T05:42:29.808Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : Server Socket closed
+2025-01-30T05:42:29.825Z  INFO 1 --- [socket] [ionShutdownHook] .s.i.i.t.c.TcpNetServerConnectionFactory : stopped bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:42:29.829Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.ip.tcp.TcpInboundGateway           : stopped bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.847Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:42:29.850Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 0 subscriber(s).
+2025-01-30T05:42:29.861Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.864Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 0 subscriber(s).
+2025-01-30T05:42:29.864Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.865Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:42:29.874Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 0 subscriber(s).
+2025-01-30T05:42:29.884Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:42:29.946Z  INFO 1 --- [socket] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:42:29.977Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-30T05:42:30.001Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+05:45:21.935 [main] INFO com.example.socket.SocketApplication -- version = 1.0
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-01-30T05:45:25.322Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Starting SocketApplication v0.0.1-SNAPSHOT using Java 22 with PID 1 (/app/app.jar started by root in /app)
+2025-01-30T05:45:25.328Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-30T05:45:28.685Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-30T05:45:29.155Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 444 ms. Found 11 JPA repository interfaces.
+2025-01-30T05:45:29.341Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-01-30T05:45:29.359Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-01-30T05:45:30.749Z  INFO 1 --- [socket] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-30T05:45:30.934Z  INFO 1 --- [socket] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-30T05:45:31.023Z  INFO 1 --- [socket] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-30T05:45:31.836Z  INFO 1 --- [socket] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-30T05:45:31.912Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-30T05:45:32.688Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@202f054f
+2025-01-30T05:45:32.690Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-30T05:45:32.856Z  WARN 1 --- [socket] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-30T05:45:36.156Z  INFO 1 --- [socket] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-30T05:45:36.163Z  INFO 1 --- [socket] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:45:39.509Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:45:39.511Z  INFO 1 --- [socket] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 1 subscriber(s).
+2025-01-30T05:45:39.512Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:45:39.521Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082 Listening
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 1 subscriber(s).
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 1 subscriber(s).
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] o.s.i.ip.tcp.TcpInboundGateway           : started bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.555Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Started SocketApplication in 16.979 seconds (process running for 20.304)
+2025-01-30T06:18:19.942Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T06:18:19.955Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 139.99.35.41:33291:8082:780d1108-1d56-4f74-8038-901e37063924 IOException:Incomplete message. Expected 12609 more bytes, but got 247
+2025-01-30T08:16:44.204Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA03032730
+2025-01-30T08:16:44.222Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.85:57430:8082:9390cb57-3dbd-40ec-b4a5-91379033df80 IOException:Incomplete message. Expected 10051 more bytes, but got 230
+2025-01-30T08:16:44.692Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:16030100CA010000C6030380D7
+2025-01-30T08:16:44.693Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.85:57440:8082:2de7b621-1077-452b-90b5-9a1a723f6d7e IOException:Incomplete message. Expected 33002 more bytes, but got 194
