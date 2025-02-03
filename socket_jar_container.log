@@ -1,0 +1,486 @@
+
+[2025-02-03 07:44:21] Запись логов контейнера socket_jar_container...
+05:35:08.325 [main] INFO com.example.socket.SocketApplication -- version = 1.0
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-01-30T05:35:10.769Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Starting SocketApplication v0.0.1-SNAPSHOT using Java 22 with PID 1 (/app/app.jar started by root in /app)
+2025-01-30T05:35:10.775Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-30T05:35:13.295Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-30T05:35:13.791Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 464 ms. Found 11 JPA repository interfaces.
+2025-01-30T05:35:14.000Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-01-30T05:35:14.032Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-01-30T05:35:15.804Z  INFO 1 --- [socket] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-30T05:35:16.019Z  INFO 1 --- [socket] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-30T05:35:16.137Z  INFO 1 --- [socket] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-30T05:35:16.938Z  INFO 1 --- [socket] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-30T05:35:17.000Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-30T05:35:18.002Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fa0ee7e
+2025-01-30T05:35:18.004Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-30T05:35:18.342Z  WARN 1 --- [socket] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-30T05:35:21.342Z  INFO 1 --- [socket] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-30T05:35:21.345Z  INFO 1 --- [socket] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:35:24.720Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:35:24.728Z  INFO 1 --- [socket] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 1 subscriber(s).
+2025-01-30T05:35:24.728Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:35:24.738Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:35:24.743Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:35:24.743Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 1 subscriber(s).
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 1 subscriber(s).
+2025-01-30T05:35:24.745Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.746Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:35:24.746Z  INFO 1 --- [socket] [           main] o.s.i.ip.tcp.TcpInboundGateway           : started bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:35:24.744Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082 Listening
+2025-01-30T05:35:24.782Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Started SocketApplication in 15.998 seconds (process running for 18.71)
+2025-01-30T05:42:29.808Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : Server Socket closed
+2025-01-30T05:42:29.825Z  INFO 1 --- [socket] [ionShutdownHook] .s.i.i.t.c.TcpNetServerConnectionFactory : stopped bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:42:29.829Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.ip.tcp.TcpInboundGateway           : stopped bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.847Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:42:29.850Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 0 subscriber(s).
+2025-01-30T05:42:29.861Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.864Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 0 subscriber(s).
+2025-01-30T05:42:29.864Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:42:29.865Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:42:29.874Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 0 subscriber(s).
+2025-01-30T05:42:29.884Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:42:29.946Z  INFO 1 --- [socket] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:42:29.977Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-30T05:42:30.001Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+05:45:21.935 [main] INFO com.example.socket.SocketApplication -- version = 1.0
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-01-30T05:45:25.322Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Starting SocketApplication v0.0.1-SNAPSHOT using Java 22 with PID 1 (/app/app.jar started by root in /app)
+2025-01-30T05:45:25.328Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-30T05:45:28.685Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-30T05:45:29.155Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 444 ms. Found 11 JPA repository interfaces.
+2025-01-30T05:45:29.341Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-01-30T05:45:29.359Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-01-30T05:45:30.749Z  INFO 1 --- [socket] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-30T05:45:30.934Z  INFO 1 --- [socket] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-30T05:45:31.023Z  INFO 1 --- [socket] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-30T05:45:31.836Z  INFO 1 --- [socket] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-30T05:45:31.912Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-30T05:45:32.688Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@202f054f
+2025-01-30T05:45:32.690Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-30T05:45:32.856Z  WARN 1 --- [socket] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-30T05:45:36.156Z  INFO 1 --- [socket] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-30T05:45:36.163Z  INFO 1 --- [socket] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T05:45:39.509Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-30T05:45:39.511Z  INFO 1 --- [socket] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 1 subscriber(s).
+2025-01-30T05:45:39.512Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-01-30T05:45:39.521Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082 Listening
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 1 subscriber(s).
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.524Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 1 subscriber(s).
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-30T05:45:39.525Z  INFO 1 --- [socket] [           main] o.s.i.ip.tcp.TcpInboundGateway           : started bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-30T05:45:39.555Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Started SocketApplication in 16.979 seconds (process running for 20.304)
+2025-01-30T06:18:19.942Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T06:18:19.955Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 139.99.35.41:33291:8082:780d1108-1d56-4f74-8038-901e37063924 IOException:Incomplete message. Expected 12609 more bytes, but got 247
+2025-01-30T08:16:44.204Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA03032730
+2025-01-30T08:16:44.222Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.85:57430:8082:9390cb57-3dbd-40ec-b4a5-91379033df80 IOException:Incomplete message. Expected 10051 more bytes, but got 230
+2025-01-30T08:16:44.692Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:16030100CA010000C6030380D7
+2025-01-30T08:16:44.693Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.85:57440:8082:2de7b621-1077-452b-90b5-9a1a723f6d7e IOException:Incomplete message. Expected 33002 more bytes, but got 194
+2025-01-30T13:50:24.685Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.49:45970:8082:b6827a33-d663-4674-84a8-34cc3597b4f9 SocketException:Connection reset
+2025-01-30T13:50:26.238Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.49:45994:8082:644c298a-b0dd-4cde-9242-9b514814ac01 EOFException:Connection closed by client.
+2025-01-30T13:50:30.257Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T13:50:30.259Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.49:46002:8082:8c6ca88a-f1fb-4f5c-b8fd-c113dbd45694 IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-01-30T13:50:31.929Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.49:57994:8082:f0da0300-021d-40ed-a931-459cbae47a56 SocketException:Connection reset
+2025-01-30T16:01:03.649Z  INFO 1 --- [socket] [pool-1-thread-5] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T16:01:03.670Z ERROR 1 --- [socket] [pool-1-thread-5] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 36.156.22.5:34504:8082:73368739-0af6-4797-8cd7-b45f42957983 IOException:Incomplete message. Expected 12609 more bytes, but got 82
+2025-01-30T20:43:21.884Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.154.121:40682:8082:aae78bc4-5a1d-42e0-9043-365d42fc723e SocketException:Connection reset
+2025-01-30T20:43:22.478Z  INFO 1 --- [socket] [pool-1-thread-6] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA0303B0BE
+2025-01-30T20:43:22.478Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.154.121:40694:8082:ab29d348-bb3c-42ee-992c-3c0c7f0ab7de IOException:Incomplete message. Expected 45265 more bytes, but got 230
+2025-01-30T20:43:26.295Z  INFO 1 --- [socket] [pool-1-thread-6] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T20:43:26.296Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.154.121:40710:8082:7785c939-ff66-465b-bccf-efa58c6f2f14 IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-01-30T20:43:27.060Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.154.121:35020:8082:60183c43-ce24-4f39-a78c-542e0543cf45 SocketException:Connection reset
+2025-01-30T20:43:30.619Z  INFO 1 --- [socket] [pool-1-thread-6] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T20:43:30.620Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.154.121:35064:8082:a41a22cc-9758-4008-b460-eaf7b11962ca IOException:Incomplete message. Expected 12609 more bytes, but got 145
+2025-01-30T20:57:01.975Z  INFO 1 --- [socket] [pool-1-thread-7] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T20:57:01.976Z ERROR 1 --- [socket] [pool-1-thread-7] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 68.183.17.199:43986:8082:cc508f68-0ef3-47b3-ac27-6f112645b870 IOException:Incomplete message. Expected 12609 more bytes, but got 316
+2025-01-30T21:40:33.493Z ERROR 1 --- [socket] [pool-1-thread-8] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.123:48444:8082:e3d2cb8a-f4ce-46d8-af87-353962442059 EOFException:Connection closed by client.
+2025-01-30T21:40:34.834Z ERROR 1 --- [socket] [pool-1-thread-8] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.123:48454:8082:789554e9-a1f4-4611-a265-93bb4316a926 EOFException:Connection closed by client.
+2025-01-30T21:40:39.533Z  INFO 1 --- [socket] [pool-1-thread-8] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-30T21:40:39.534Z ERROR 1 --- [socket] [pool-1-thread-8] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.123:41838:8082:b653a757-e99d-461d-86e6-fdc60990f040 IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-01-30T21:40:44.097Z ERROR 1 --- [socket] [pool-1-thread-8] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.123:41850:8082:a0b0567b-61b3-4e3c-abdd-e476b81a3f59 EOFException:Connection closed by client.
+2025-01-30T21:40:55.483Z ERROR 1 --- [socket] [pool-1-thread-8] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.123:57710:8082:6f0c1717-2229-424b-ab9e-009731e2629b IOException:Insufficient data. Expected at least 13 bytes, but got 12
+2025-01-31T04:30:50.424Z  INFO 1 --- [socket] [pool-1-thread-9] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA0303F367
+2025-01-31T04:30:50.871Z ERROR 1 --- [socket] [pool-1-thread-9] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 147.185.132.105:63114:8082:73125b79-1124-4bd6-8f84-b86b41cc7e04 IOException:Incomplete message. Expected 62330 more bytes, but got 230
+2025-01-31T04:30:51.137Z  INFO 1 --- [socket] [pool-1-thread-9] c.e.socket.utils.CustomDeserializer      : Headers:16030100CA010000C60303BDF4
+2025-01-31T04:30:51.138Z ERROR 1 --- [socket] [pool-1-thread-9] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 147.185.132.105:63118:8082:39d9999f-d26c-40ce-823e-91872ab6fb95 IOException:Incomplete message. Expected 48647 more bytes, but got 194
+2025-01-31T07:05:41.991Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T07:05:42.006Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.235:56717:8082:04b5d54c-2b10-48b1-9635-ab9a4951746a IOException:Incomplete message. Expected 12609 more bytes, but got 184
+2025-01-31T07:05:57.109Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T07:05:57.109Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.241:46991:8082:218bb6bb-ca27-4cf6-b204-87bf2df1387e IOException:Incomplete message. Expected 12609 more bytes, but got 5
+2025-01-31T07:05:57.210Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:474554202F6E69636525323070
+2025-01-31T07:05:57.211Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.241:55771:8082:9a9f2df5-4b1c-4080-bb67-5593f91ccc1c IOException:Incomplete message. Expected 12419 more bytes, but got 40
+2025-01-31T07:06:12.313Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:05000B03100000004800000001
+2025-01-31T07:06:12.325Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : All Message:05000B03100000004800000001000000B810B81000000000010000000000010008
+2025-01-31T07:06:12.690Z  INFO 1 --- [socket] [ool-1-thread-10] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:06:30.363Z  INFO 1 --- [socket] [ool-1-thread-11] c.e.socket.utils.CustomDeserializer      : Headers:800000287CE64E2A0000000000
+2025-01-31T07:06:30.367Z  INFO 1 --- [socket] [ool-1-thread-11] c.e.socket.utils.CustomDeserializer      : All Message:800000287CE64E2A0000000000000002000186A0000000040000000000000000
+2025-01-31T07:06:30.368Z  INFO 1 --- [socket] [ool-1-thread-11] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:06:42.697Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.223:44401:8082:02b9c557-d584-482a-a6b8-3c06976abb9b EOFException:Connection closed by client.
+2025-01-31T07:06:48.457Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:4F5054494F4E53207369703A31
+2025-01-31T07:06:48.458Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.238:51425:8082:66a0c608-f8ba-46a8-8fc0-7c27e4644415 IOException:Incomplete message. Expected 14916 more bytes, but got 250
+2025-01-31T07:07:00.369Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.238:58385:8082:6089257d-4feb-4c72-837e-b277f25fdfbd EOFException:Connection closed by client.
+2025-01-31T07:07:09.509Z  INFO 1 --- [socket] [ool-1-thread-11] c.e.socket.utils.CustomDeserializer      : Headers:0300002C27E00000000000436F
+2025-01-31T07:07:09.510Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.219:53997:8082:85afe12a-3739-4996-ae69-2ce1b210603f IOException:Incomplete message. Expected 17282 more bytes, but got 31
+2025-01-31T07:07:24.647Z  INFO 1 --- [socket] [ool-1-thread-11] c.e.socket.utils.CustomDeserializer      : Headers:009C00011A2B3C4D0001000001
+2025-01-31T07:07:24.648Z  INFO 1 --- [socket] [ool-1-thread-11] c.e.socket.utils.CustomDeserializer      : All Message:009C00011A2B3C4D00010000010000000000000300000003000000010000000000
+2025-01-31T07:07:24.648Z  INFO 1 --- [socket] [ool-1-thread-11] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:07:42.704Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:00000031FF534D427200000000
+2025-01-31T07:07:42.704Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : All Message:00000031FF534D42720000000000000000000000000000000000000000000000
+2025-01-31T07:07:42.705Z  INFO 1 --- [socket] [ool-1-thread-10] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:07:45.752Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:0000006EFE534D424000000000
+2025-01-31T07:07:45.753Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : All Message:0000006EFE534D42400000000000000000000000000000000000000000000000
+2025-01-31T07:07:45.753Z  INFO 1 --- [socket] [ool-1-thread-12] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:07:54.649Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.241:59793:8082:494ef21a-ca4d-4ce7-991e-aea364aaa9c1 EOFException:Connection closed by client.
+2025-01-31T07:08:03.805Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.236:37589:8082:f57f255f-ceac-4414-8015-cbcc85c53105 IOException:Insufficient data. Expected at least 13 bytes, but got 9
+2025-01-31T07:08:12.706Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.249:47527:8082:742997aa-442c-45d2-9663-56e803e85251 EOFException:Connection closed by client.
+2025-01-31T07:08:15.754Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.249:37357:8082:4c108c08-9d68-4fce-bd44-0c8bf4ed5ca2 EOFException:Connection closed by client.
+2025-01-31T07:08:18.903Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:1201001A0000000000000B0006
+2025-01-31T07:08:18.904Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.238:41059:8082:a3ffbd16-d85f-4d3b-a842-7e45a3795183 IOException:Incomplete message. Expected 25 more bytes, but got 13
+2025-01-31T07:08:34.001Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:370000009D89F2A500000000D4
+2025-01-31T07:08:34.002Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.226:59851:8082:8f4d5689-9519-40d7-be36-f2586c5a77cf IOException:Incomplete message. Expected 231 more bytes, but got 42
+2025-01-31T07:08:49.102Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:300C0201016007020103040080
+2025-01-31T07:08:49.103Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.229:57327:8082:812299d3-53f9-4e75-b239-97d11a9fc359 IOException:Incomplete message. Expected 147 more bytes, but got 1
+2025-01-31T07:08:49.227Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:301D02010177188016312E332E
+2025-01-31T07:08:49.228Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.229:59577:8082:5e69edf9-1369-4a13-afda-2b68c957920c IOException:Incomplete message. Expected 13121 more bytes, but got 18
+2025-01-31T07:09:04.336Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:2A310D0A24340D0A696E666F0D
+2025-01-31T07:09:04.337Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.239:33133:8082:677bde5c-ac55-4bdd-b773-b61fd9ca809e IOException:Incomplete message. Expected 28448 more bytes, but got 1
+2025-01-31T07:09:19.441Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:666F7820612031202D3120666F
+2025-01-31T07:09:19.442Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.223:53761:8082:a8649bdb-2365-41f5-8d30-aa6a12f51021 IOException:Incomplete message. Expected 26242 more bytes, but got 39
+2025-01-31T07:09:34.598Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.220:45367:8082:6f7f975f-6e13-4fc5-97db-5711cc923129 IOException:Insufficient data. Expected at least 13 bytes, but got 11
+2025-01-31T07:09:49.699Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.250:39483:8082:70c83af8-e11c-4865-bf25-98324fa1a100 IOException:Insufficient data. Expected at least 13 bytes, but got 12
+2025-01-31T07:10:04.805Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.252:57871:8082:8eccbf96-3067-4195-b4f4-4d9bbe82d253 IOException:Insufficient data. Expected at least 13 bytes, but got 7
+2025-01-31T07:10:19.912Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:0100000000CD00010000414E59
+2025-01-31T07:10:19.913Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.237:55863:8082:d1dda6bd-dc99-4ad1-a3d9-300d54bc7b38 IOException:Incomplete message. Expected 20076 more bytes, but got 198
+2025-01-31T07:10:35.016Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:0032D0010001002C1041000411
+2025-01-31T07:10:35.016Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.242:54709:8082:b9b26aab-973d-4061-a984-41afb031a73b IOException:Incomplete message. Expected 1060 more bytes, but got 37
+2025-01-31T07:10:50.129Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:48454C464400000000000000FF
+2025-01-31T07:10:50.129Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.220:38995:8082:45d28b59-7661-44e5-b5d1-28100bb541c5 IOException:Incomplete message. Expected 274 more bytes, but got 55
+2025-01-31T07:11:05.230Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.237:56945:8082:65ccad08-7100-4f81-a0d7-3aa2f5d3805c IOException:Insufficient data. Expected at least 13 bytes, but got 2
+2025-01-31T07:11:20.358Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:AA44D9EF28833DFB0E71C18524
+2025-01-31T07:11:20.359Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.226:36871:8082:fe4aa37b-30b4-4c5f-a1e8-7632f78fd93e IOException:Incomplete message. Expected 34103 more bytes, but got 307
+2025-01-31T07:11:20.457Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:F9BEB4D976657273696F6E0000
+2025-01-31T07:11:20.458Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : All Message:F9BEB4D976657273696F6E000000000056000000A2CE67838011010000000000
+2025-01-31T07:11:20.458Z  INFO 1 --- [socket] [ool-1-thread-12] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:11:38.506Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : Headers:A94D5C8D06C5CA760000000000
+2025-01-31T07:11:38.506Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : All Message:A94D5C8D06C5CA760000000000000000212022080000000000000244220001A8
+2025-01-31T07:11:38.549Z  INFO 1 --- [socket] [ool-1-thread-13] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:11:50.466Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.226:50563:8082:016a4754-e011-43a0-a784-310d9ecc4f86 EOFException:Connection closed by client.
+2025-01-31T07:11:59.601Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.229:60959:8082:b4cd6677-d710-4097-aeb5-2c2835c9f626 IOException:Insufficient data. Expected at least 13 bytes, but got 6
+2025-01-31T07:12:08.550Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : Headers:A94D5C8D06C5CA760000000000
+2025-01-31T07:12:08.550Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : All Message:A94D5C8D06C5CA7600000000000000000110020000000000000001380D000108
+2025-01-31T07:12:08.550Z  INFO 1 --- [socket] [ool-1-thread-13] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:12:14.698Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:000E38CDC36AF67EE495230000
+2025-01-31T07:12:14.699Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.236:32799:8082:9646987e-caa5-4b15-8b0e-412578b4720c IOException:Incomplete message. Expected 19 more bytes, but got 3
+2025-01-31T07:12:29.810Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.239:46863:8082:b8a9beb5-ddaa-4b7e-96c6-4ae8167ef9a2 IOException:Insufficient data. Expected at least 13 bytes, but got 3
+2025-01-31T07:12:30.008Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.239:38669:8082:928fbf3d-1443-4563-bdc5-9ec2c96b3ef9 IOException:Insufficient data. Expected at least 13 bytes, but got 9
+2025-01-31T07:12:38.551Z ERROR 1 --- [socket] [ool-1-thread-13] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 185.247.137.247:58891:8082:1d1e1c2b-69a6-4d13-88f3-69240e1089ac EOFException:Connection closed by client.
+2025-01-31T07:12:45.106Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : Headers:01210101010101010A00000000
+2025-01-31T07:12:45.106Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : All Message:01210101010101010A0000000000000001EB0300000000000001000000010000
+2025-01-31T07:12:45.107Z  INFO 1 --- [socket] [ool-1-thread-13] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T07:13:01.180Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:160301010A010001060303A4D9
+2025-01-31T07:13:01.181Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.240:48353:8082:68b284f4-35f7-4fe1-aa75-1d5c308c1d7f IOException:Incomplete message. Expected 42220 more bytes, but got 258
+2025-01-31T07:13:15.107Z ERROR 1 --- [socket] [ool-1-thread-13] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 87.236.176.252:51247:8082:ec656c5c-b173-4eee-89b6-9f44ec911cb7 EOFException:Connection closed by client.
+2025-01-31T07:30:16.677Z  INFO 1 --- [socket] [ool-1-thread-14] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T07:30:16.690Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 154.212.141.208:43244:8082:24cc12dd-b52f-4323-b479-b9f06642ed57 IOException:Incomplete message. Expected 12609 more bytes, but got 43
+2025-01-31T07:30:17.212Z  INFO 1 --- [socket] [ool-1-thread-14] c.e.socket.utils.CustomDeserializer      : Headers:16030100F2010000EE03037D43
+2025-01-31T07:30:17.213Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 154.212.141.208:43458:8082:a49338bc-fdcd-4f85-94ad-c39627b6e276 IOException:Incomplete message. Expected 32086 more bytes, but got 234
+2025-01-31T07:30:17.721Z  INFO 1 --- [socket] [ool-1-thread-14] c.e.socket.utils.CustomDeserializer      : Headers:16030100F2010000EE030361AE
+2025-01-31T07:30:17.721Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 154.212.141.208:43484:8082:6d43a90e-0fd0-4ccd-856d-8bbd810fdbef IOException:Incomplete message. Expected 25025 more bytes, but got 234
+2025-01-31T07:30:27.974Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 154.212.141.208:43532:8082:c307f939-0fe0-4e67-bdcb-89ff2e2f438f EOFException:Connection closed by client.
+2025-01-31T07:30:28.234Z  INFO 1 --- [socket] [ool-1-thread-14] c.e.socket.utils.CustomDeserializer      : Headers:5553455220616E6F6E796D6F75
+2025-01-31T07:30:28.236Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 154.212.141.208:44372:8082:cce993a1-e48d-4db1-9ea6-6adc0dec55e5 IOException:Incomplete message. Expected 28552 more bytes, but got 3
+2025-01-31T10:05:03.232Z ERROR 1 --- [socket] [ool-1-thread-15] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 205.210.31.67:53213:8082:18b10203-0b47-4352-be37-307b43fc84ac SocketException:Connection reset
+2025-01-31T12:54:42.457Z  INFO 1 --- [socket] [ionShutdownHook] .s.i.i.t.c.TcpNetServerConnectionFactory : stopped bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-31T12:54:42.467Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.ip.tcp.TcpInboundGateway           : stopped bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 0 subscriber(s).
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 0 subscriber(s).
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 0 subscriber(s).
+2025-01-31T12:54:42.468Z  INFO 1 --- [socket] [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-01-31T12:54:42.484Z  INFO 1 --- [socket] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31T12:54:42.508Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-31T12:54:42.522Z  INFO 1 --- [socket] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+12:59:43.711 [main] INFO com.example.socket.SocketApplication -- version = 1.0
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2025-01-31T12:59:46.844Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Starting SocketApplication v0.0.1-SNAPSHOT using Java 22 with PID 1 (/app/app.jar started by root in /app)
+2025-01-31T12:59:46.856Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-01-31T12:59:49.952Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31T12:59:50.543Z  INFO 1 --- [socket] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 562 ms. Found 11 JPA repository interfaces.
+2025-01-31T12:59:50.797Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-01-31T12:59:50.828Z  INFO 1 --- [socket] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-01-31T12:59:52.918Z  INFO 1 --- [socket] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31T12:59:53.143Z  INFO 1 --- [socket] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-31T12:59:53.275Z  INFO 1 --- [socket] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-31T12:59:54.464Z  INFO 1 --- [socket] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31T12:59:54.563Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-31T12:59:55.653Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67fac095
+2025-01-31T12:59:55.655Z  INFO 1 --- [socket] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-31T12:59:55.985Z  WARN 1 --- [socket] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31T12:59:59.276Z  INFO 1 --- [socket] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31T12:59:59.279Z  INFO 1 --- [socket] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31T13:00:03.631Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-01-31T13:00:03.633Z  INFO 1 --- [socket] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'socket.errorChannel' has 1 subscriber(s).
+2025-01-31T13:00:03.634Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-01-31T13:00:03.638Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-31T13:00:03.643Z  INFO 1 --- [socket] [pool-1-thread-1] .s.i.i.t.c.TcpNetServerConnectionFactory : bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082 Listening
+2025-01-31T13:00:03.644Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {bridge} as a subscriber to the 'tcpInboundFlow.channel#0' channel
+2025-01-31T13:00:03.644Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.tcpInboundFlow.channel#0' has 1 subscriber(s).
+2025-01-31T13:00:03.646Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-31T13:00:03.651Z  INFO 1 --- [socket] [           main] o.s.integration.channel.DirectChannel    : Channel 'socket.inputChannel' has 1 subscriber(s).
+2025-01-31T13:00:03.651Z  INFO 1 --- [socket] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean 'tcpInboundFlow.org.springframework.integration.config.ConsumerEndpointFactoryBean#1'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-31T13:00:03.651Z  INFO 1 --- [socket] [           main] .s.i.i.t.c.TcpNetServerConnectionFactory : started bean 'serverConnectionFactory'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'com.example.socket.TcpIntegrationConfig.serverConnectionFactory()', port=8082
+2025-01-31T13:00:03.651Z  INFO 1 --- [socket] [           main] o.s.i.ip.tcp.TcpInboundGateway           : started bean 'tcpInboundFlow.ip:tcp-inbound-gateway#0'; defined in: 'class path resource [com/example/socket/TcpIntegrationConfig.class]'; from source: 'bean method tcpInboundFlow'
+2025-01-31T13:00:03.683Z  INFO 1 --- [socket] [           main] com.example.socket.SocketApplication     : Started SocketApplication in 19.324 seconds (process running for 22.479)
+2025-01-31T17:40:30.469Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:40:30.479Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:53754:8082:3f4a5d83-008d-4583-bb0e-11ee18a1d98e IOException:Incomplete message. Expected 12609 more bytes, but got 5
+2025-01-31T17:40:30.598Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F6E69636525323070
+2025-01-31T17:40:30.599Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:53478:8082:83b2aeed-1b81-4a1d-8a2f-9f46b47b57f8 IOException:Incomplete message. Expected 12419 more bytes, but got 40
+2025-01-31T17:40:30.681Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:53488:8082:3766ec1b-b537-42de-83c1-8c2348dc7eec IOException:Insufficient data. Expected at least 13 bytes, but got 4
+2025-01-31T17:40:30.778Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:4F5054494F4E53202F20485454
+2025-01-31T17:40:30.778Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:53500:8082:6e7e408d-0c01-45a8-b7b9-a2ed421ab425 IOException:Incomplete message. Expected 21607 more bytes, but got 9
+2025-01-31T17:40:30.881Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:4F5054494F4E53202F20525453
+2025-01-31T17:40:30.882Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:53506:8082:92c61c51-6023-4c00-a2ca-278de5390d75 IOException:Incomplete message. Expected 21606 more bytes, but got 9
+2025-01-31T17:40:30.954Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:8000002872FE1D130000000000
+2025-01-31T17:40:30.955Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : All Message:8000002872FE1D130000000000000002000186A00001977C0000000000000000
+2025-01-31T17:40:31.082Z  INFO 1 --- [socket] [pool-1-thread-2] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T17:40:35.995Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:001E0006010000010000000000
+2025-01-31T17:40:35.996Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : All Message:001E0006010000010000000000000776657273696F6E0462696E640000100003
+2025-01-31T17:40:35.998Z  INFO 1 --- [socket] [pool-1-thread-3] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T17:40:41.025Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55466:8082:e3cd876e-2b8f-471b-971c-178fb43ceaa7 IOException:Insufficient data. Expected at least 13 bytes, but got 6
+2025-01-31T17:40:41.108Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:16030000530100004F03003F47
+2025-01-31T17:40:41.109Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55468:8082:d7c2185e-2c64-4fed-ba4d-122275899a83 IOException:Incomplete message. Expected 16218 more bytes, but got 75
+2025-01-31T17:40:41.195Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:1603000069010000650303551C
+2025-01-31T17:40:41.197Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55478:8082:fc8f8083-7eac-4d99-baff-0979e96afab3 IOException:Incomplete message. Expected 21807 more bytes, but got 97
+2025-01-31T17:40:41.279Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:000000716A816E30816BA10302
+2025-01-31T17:40:41.280Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55490:8082:bbc5b2ca-6bff-4c22-99ca-793c32485dcc IOException:Incomplete message. Expected 789 more bytes, but got 104
+2025-01-31T17:40:41.357Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:000000A4FF534D427200000000
+2025-01-31T17:40:41.357Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : All Message:000000A4FF534D42720000000008014000000000000000000000000000004006
+2025-01-31T17:40:41.359Z  INFO 1 --- [socket] [pool-1-thread-4] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-01-31T17:40:46.388Z ERROR 1 --- [socket] [pool-1-thread-5] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55508:8082:85108dc6-e7ec-47d0-b9c9-04a9b4bc2873 IOException:Insufficient data. Expected at least 13 bytes, but got 12
+2025-01-31T17:40:46.458Z  INFO 1 --- [socket] [pool-1-thread-5] c.e.socket.utils.CustomDeserializer      : Headers:4F5054494F4E53207369703A6E
+2025-01-31T17:40:46.458Z ERROR 1 --- [socket] [pool-1-thread-5] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55514:8082:6ed1e978-4e1a-4055-921a-2d8dd94ad482 IOException:Incomplete message. Expected 14977 more bytes, but got 210
+2025-01-31T17:40:46.524Z ERROR 1 --- [socket] [pool-1-thread-5] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55526:8082:628995f3-7b0b-476a-a544-3956b3d03383 IOException:Insufficient data. Expected at least 13 bytes, but got 8
+2025-01-31T17:41:01.097Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:36792:8082:c7de5306-4815-48ee-9aa7-feb2461e8a37 EOFException:Connection closed by client.
+2025-01-31T17:41:05.998Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:53522:8082:113b5dda-38e1-4914-9829-5c0c83d48fbf EOFException:Connection closed by client.
+2025-01-31T17:41:11.359Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:55504:8082:051b91af-b7d0-4078-bdd3-117592352158 EOFException:Connection closed by client.
+2025-01-31T17:41:21.762Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:21.762Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45670:8082:04cb5c9b-5e72-44c1-a6d6-8a4343762438 IOException:Incomplete message. Expected 12609 more bytes, but got 87
+2025-01-31T17:41:21.781Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:474554202F7365727665722D73
+2025-01-31T17:41:21.766Z  INFO 1 --- [socket] [pool-1-thread-6] c.e.socket.utils.CustomDeserializer      : Headers:0E000000000000000000000000
+2025-01-31T17:41:21.785Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45654:8082:7baa4edd-10aa-4a8c-b063-4455a30da5c1 IOException:Incomplete message. Expected 11654 more bytes, but got 100
+2025-01-31T17:41:21.785Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45676:8082:a00dd0fe-e564-42a7-b375-8159baf6a3b8 IOException:Incomplete message. Expected 19 more bytes, but got 17
+2025-01-31T17:41:21.785Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F2E6769742F484541
+2025-01-31T17:41:21.786Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45678:8082:12158052-8b7c-4f78-82a0-4ba09e47adc3 IOException:Incomplete message. Expected 17748 more bytes, but got 96
+2025-01-31T17:41:21.891Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03030D55
+2025-01-31T17:41:21.891Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45692:8082:090d0efb-b5e8-4190-a78b-735ad02dc113 IOException:Incomplete message. Expected 3432 more bytes, but got 504
+2025-01-31T17:41:21.925Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC030376B2
+2025-01-31T17:41:21.926Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45708:8082:04af77fb-9fc5-432b-904c-5354753607cc IOException:Incomplete message. Expected 30405 more bytes, but got 504
+2025-01-31T17:41:21.929Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303D223
+2025-01-31T17:41:21.929Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45712:8082:21d1bc26-8f9b-49b9-8588-777d96c9c65d IOException:Incomplete message. Expected 53814 more bytes, but got 504
+2025-01-31T17:41:21.990Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:474554202F3F3D504850453935
+2025-01-31T17:41:21.991Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45728:8082:2b78c235-60cd-47e2-aba4-29489adc5772 IOException:Incomplete message. Expected 14664 more bytes, but got 128
+2025-01-31T17:41:21.994Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603000069010000650303551C
+2025-01-31T17:41:21.994Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45716:8082:264e96d2-ea66-44a1-a39e-f6736861c328 IOException:Incomplete message. Expected 21807 more bytes, but got 97
+2025-01-31T17:41:22.140Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:16030000530100004F03003F47
+2025-01-31T17:41:22.134Z  INFO 1 --- [socket] [pool-1-thread-6] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:22.141Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45744:8082:bce4c66e-3f97-4d12-a638-7b1cbaf83c60 IOException:Incomplete message. Expected 16218 more bytes, but got 75
+2025-01-31T17:41:22.141Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45752:8082:dccdab5a-efac-4469-b26c-e857fb89a125 IOException:Incomplete message. Expected 12609 more bytes, but got 87
+2025-01-31T17:41:22.142Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03037BDE
+2025-01-31T17:41:22.142Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45768:8082:aab2ec60-9abf-4176-9b54-e9ab9d31bad9 IOException:Incomplete message. Expected 31729 more bytes, but got 504
+2025-01-31T17:41:22.157Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:474554202F73746172742E7368
+2025-01-31T17:41:22.159Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45784:8082:209af740-d550-4dbe-8066-ab0909071d79 IOException:Incomplete message. Expected 29563 more bytes, but got 98
+2025-01-31T17:41:22.268Z  INFO 1 --- [socket] [pool-1-thread-6] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303317F
+2025-01-31T17:41:22.268Z ERROR 1 --- [socket] [pool-1-thread-6] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45830:8082:501ad07b-0ddf-4bc1-af8d-8c45a2c6f0d4 IOException:Incomplete message. Expected 12690 more bytes, but got 504
+2025-01-31T17:41:22.297Z  INFO 1 --- [socket] [pool-1-thread-3] c.e.socket.utils.CustomDeserializer      : Headers:474554202F3F3D504850423842
+2025-01-31T17:41:22.298Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03037C54
+2025-01-31T17:41:22.299Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45812:8082:47a270e0-85be-429c-b09d-e74990a19feb IOException:Incomplete message. Expected 31847 more bytes, but got 504
+2025-01-31T17:41:22.299Z ERROR 1 --- [socket] [pool-1-thread-3] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45820:8082:a8d69a9a-3784-4c46-b523-4728b9fbb89c IOException:Incomplete message. Expected 14421 more bytes, but got 128
+2025-01-31T17:41:22.299Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:22.300Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45796:8082:d128c68d-4557-47d2-a560-8401b28ee9e9 IOException:Incomplete message. Expected 12609 more bytes, but got 87
+2025-01-31T17:41:22.421Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03030AF6
+2025-01-31T17:41:22.421Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45834:8082:2dff65c7-dfc1-4f3c-91dd-3fcd65116bab IOException:Incomplete message. Expected 2825 more bytes, but got 504
+2025-01-31T17:41:22.452Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:474554202F66617669636F6E2E
+2025-01-31T17:41:22.452Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45836:8082:672f211f-1907-4acc-96d8-e399dc0af290 IOException:Incomplete message. Expected 28225 more bytes, but got 98
+2025-01-31T17:41:22.458Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303F7C7
+2025-01-31T17:41:22.459Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45852:8082:cf8b63a2-908c-4519-bc10-71744ee53b47 IOException:Incomplete message. Expected 63450 more bytes, but got 504
+2025-01-31T17:41:22.499Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:22.500Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45858:8082:ee232f39-de03-4b57-83b5-a21e93c9fac8 IOException:Incomplete message. Expected 12609 more bytes, but got 87
+2025-01-31T17:41:22.540Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F506F7274616C3030
+2025-01-31T17:41:22.541Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45860:8082:4071f9eb-c6b3-4b62-903e-fcbe149053dd IOException:Incomplete message. Expected 12355 more bytes, but got 101
+2025-01-31T17:41:22.581Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03031658
+2025-01-31T17:41:22.582Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45862:8082:88b4744e-2c86-4b13-ad4e-275280325b6d IOException:Incomplete message. Expected 5739 more bytes, but got 504
+2025-01-31T17:41:22.622Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303234F
+2025-01-31T17:41:22.623Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45864:8082:277274de-3506-4f3d-b3de-c45500fab328 IOException:Incomplete message. Expected 9058 more bytes, but got 504
+2025-01-31T17:41:22.668Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303026E
+2025-01-31T17:41:22.669Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45880:8082:f25f5fd4-2713-43e7-ab40-7996a6a63b50 IOException:Incomplete message. Expected 641 more bytes, but got 504
+2025-01-31T17:41:22.810Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:22.819Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45882:8082:fcecb64d-05bd-4f8c-8467-397fd1688798 IOException:Incomplete message. Expected 12609 more bytes, but got 87
+2025-01-31T17:41:22.824Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F5F5F416464697469
+2025-01-31T17:41:22.825Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45892:8082:3747d403-0d16-472a-a986-8d45d524ee0d IOException:Incomplete message. Expected 29820 more bytes, but got 99
+2025-01-31T17:41:22.953Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03037798
+2025-01-31T17:41:22.954Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45910:8082:02fab52f-00d3-49d9-94ce-d2a5ddffac04 IOException:Incomplete message. Expected 30635 more bytes, but got 504
+2025-01-31T17:41:22.984Z  INFO 1 --- [socket] [pool-1-thread-4] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303F41E
+2025-01-31T17:41:22.985Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45906:8082:135d9423-d544-4b25-97c9-0005ad638876 IOException:Incomplete message. Expected 62513 more bytes, but got 504
+2025-01-31T17:41:23.745Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F506F7274616C2F50
+2025-01-31T17:41:23.745Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45932:8082:a60d623d-676b-445c-b499-6ecd70dac261 IOException:Incomplete message. Expected 12131 more bytes, but got 105
+2025-01-31T17:41:23.882Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC030357CF
+2025-01-31T17:41:23.883Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45936:8082:b372eb37-f646-430e-9360-6d59c2055e93 IOException:Incomplete message. Expected 22498 more bytes, but got 504
+2025-01-31T17:41:24.020Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F646F63732F63706C
+2025-01-31T17:41:24.020Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45942:8082:fdb76770-6d63-484a-9760-fe690799654a IOException:Incomplete message. Expected 28799 more bytes, but got 108
+2025-01-31T17:41:24.173Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303FB28
+2025-01-31T17:41:24.174Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45944:8082:818cf703-5e87-4b63-a15e-96562aacb268 IOException:Incomplete message. Expected 64315 more bytes, but got 504
+2025-01-31T17:41:24.458Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:504F5354202F73646B20485454
+2025-01-31T17:41:24.459Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45952:8082:ddd9ee53-8c85-429a-b0f2-6e56f3b6b109 IOException:Incomplete message. Expected 21607 more bytes, but got 553
+2025-01-31T17:41:24.588Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303235D
+2025-01-31T17:41:24.589Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45958:8082:13402d9c-493b-45bc-a93b-1c0bbeb64f17 IOException:Incomplete message. Expected 9072 more bytes, but got 504
+2025-01-31T17:41:24.775Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:24.775Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45960:8082:970f2542-08fc-4ed7-af7c-454eef316a60 IOException:Incomplete message. Expected 12609 more bytes, but got 87
+2025-01-31T17:41:24.910Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03030B32
+2025-01-31T17:41:24.910Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45968:8082:b6f3a2d8-c914-484c-add9-790435a5d952 IOException:Incomplete message. Expected 2885 more bytes, but got 504
+2025-01-31T17:41:25.105Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:25.107Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45980:8082:fc028588-d767-466b-b56f-9963801a8cc6 IOException:Incomplete message. Expected 12609 more bytes, but got 87
+2025-01-31T17:41:25.234Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303096B
+2025-01-31T17:41:25.236Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45982:8082:8f711e1c-339d-43d9-a3a8-b451b00eac1b IOException:Incomplete message. Expected 2430 more bytes, but got 504
+2025-01-31T17:41:25.417Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F5554644F20485454
+2025-01-31T17:41:25.418Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45996:8082:e1ae0ae3-33d7-4f40-b3ba-db5ed5868037 IOException:Incomplete message. Expected 21607 more bytes, but got 91
+2025-01-31T17:41:25.558Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03036C89
+2025-01-31T17:41:25.558Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45998:8082:c3d35aa8-fa43-47ed-8ded-b2f4b01ca012 IOException:Incomplete message. Expected 27804 more bytes, but got 504
+2025-01-31T17:41:25.732Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F4353532F4D696E69
+2025-01-31T17:41:25.733Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46014:8082:8e424131-4b2d-4c5a-8729-67cd56c30961 IOException:Incomplete message. Expected 28284 more bytes, but got 102
+2025-01-31T17:41:25.901Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303BFB1
+2025-01-31T17:41:25.902Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46016:8082:c3657af1-b6ae-4d77-aee9-bc271a00c5c3 IOException:Incomplete message. Expected 49092 more bytes, but got 504
+2025-01-31T17:41:26.627Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F6E6D61706C6F7765
+2025-01-31T17:41:26.628Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46018:8082:ffd56036-76b3-4307-bd90-dc29f9141001 IOException:Incomplete message. Expected 30584 more bytes, but got 111
+2025-01-31T17:41:26.783Z  INFO 1 --- [socket] [pool-1-thread-5] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:26.784Z ERROR 1 --- [socket] [pool-1-thread-5] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45674:8082:693bbfed-7adc-43dd-8958-313d6bc6d2a5 IOException:Incomplete message. Expected 12609 more bytes, but got 145
+2025-01-31T17:41:26.786Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03039F52
+2025-01-31T17:41:26.787Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46020:8082:9fdf4878-3a6c-45b0-a069-79934e23f047 IOException:Incomplete message. Expected 40805 more bytes, but got 504
+2025-01-31T17:41:26.928Z  INFO 1 --- [socket] [pool-1-thread-5] c.e.socket.utils.CustomDeserializer      : Headers:474554202F484E415031204854
+2025-01-31T17:41:26.928Z ERROR 1 --- [socket] [pool-1-thread-5] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46042:8082:a5096b6e-d398-4d0c-8bdf-f3022084faa6 IOException:Incomplete message. Expected 18535 more bytes, but got 92
+2025-01-31T17:41:26.953Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303FFA3
+2025-01-31T17:41:26.954Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46032:8082:60bcb7b7-4897-48bb-8614-576f732edc9c IOException:Incomplete message. Expected 65462 more bytes, but got 504
+2025-01-31T17:41:27.069Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC0303881E
+2025-01-31T17:41:27.070Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46046:8082:8d84eec8-af6c-41d7-bf06-1b90794526b5 IOException:Incomplete message. Expected 34865 more bytes, but got 504
+2025-01-31T17:41:27.133Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F726573742F617070
+2025-01-31T17:41:27.134Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46048:8082:e24f4d31-c186-481f-8641-a7838cfbfc3c IOException:Incomplete message. Expected 28803 more bytes, but got 113
+2025-01-31T17:41:27.282Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03034D45
+2025-01-31T17:41:27.283Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46062:8082:0a0f78a8-0fcb-4198-b7c7-a17882e8c58d IOException:Incomplete message. Expected 19800 more bytes, but got 504
+2025-01-31T17:41:27.401Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F636F6E666C75656E
+2025-01-31T17:41:27.402Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46064:8082:4787d690-8a98-4377-a00a-914ac52014be IOException:Incomplete message. Expected 25985 more bytes, but got 124
+2025-01-31T17:41:27.529Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC03032BB2
+2025-01-31T17:41:27.531Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:46076:8082:3d17df15-48f3-4c39-b4f6-ed97e09bf171 IOException:Incomplete message. Expected 11205 more bytes, but got 504
+2025-01-31T17:41:32.172Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-01-31T17:41:32.173Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:37136:8082:75791295-21bc-4114-ab86-12e07d4a0ea7 IOException:Incomplete message. Expected 12609 more bytes, but got 5
+2025-01-31T17:41:32.299Z  INFO 1 --- [socket] [pool-1-thread-2] c.e.socket.utils.CustomDeserializer      : Headers:1603010200010001FC030316D7
+2025-01-31T17:41:32.299Z ERROR 1 --- [socket] [pool-1-thread-2] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:37142:8082:26774996-ebaa-4a59-93a0-b22b869c6646 IOException:Incomplete message. Expected 5866 more bytes, but got 504
+2025-01-31T17:41:32.636Z ERROR 1 --- [socket] [pool-1-thread-4] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 172.233.57.157:45922:8082:f65e1c74-f1c0-43ee-810f-6277a8ce6e2e EOFException:Connection closed by client.
+2025-01-31T21:18:59.740Z ERROR 1 --- [socket] [pool-1-thread-7] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 205.210.31.186:53813:8082:0b293c2f-f9ce-4747-9b9b-3967ca131bd0 SocketException:Connection reset
+2025-02-01T03:29:56.395Z ERROR 1 --- [socket] [pool-1-thread-8] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.160:47758:8082:ae1c7cb0-5826-4f0b-9d3c-d105a5d32661 EOFException:Connection closed by client.
+2025-02-01T03:29:57.514Z  INFO 1 --- [socket] [pool-1-thread-9] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA03033963
+2025-02-01T03:29:57.514Z ERROR 1 --- [socket] [pool-1-thread-9] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.160:47774:8082:6c55ba9f-93d8-4222-b6da-6a6f72d3eadd IOException:Incomplete message. Expected 14710 more bytes, but got 230
+2025-02-01T03:30:02.167Z  INFO 1 --- [socket] [pool-1-thread-9] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-01T03:30:02.168Z ERROR 1 --- [socket] [pool-1-thread-9] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.160:47806:8082:1566e5cf-d3a9-4d21-8c58-256b6b42fead IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-02-01T03:30:05.241Z ERROR 1 --- [socket] [pool-1-thread-9] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.160:48302:8082:0699bf24-7a48-4d6c-8e35-a59303a782b8 SocketException:Connection reset
+2025-02-01T03:30:15.558Z  INFO 1 --- [socket] [pool-1-thread-9] c.e.socket.utils.CustomDeserializer      : Headers:0D9B650008002F303049444544
+2025-02-01T03:30:15.558Z ERROR 1 --- [socket] [pool-1-thread-9] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.138.160:41216:8082:bc17937c-b523-4745-a058-9073189fb818 IOException:Incomplete message. Expected 17751 more bytes, but got 1
+2025-02-01T06:50:15.163Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA03036256
+2025-02-01T06:50:15.168Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.120:61772:8082:04edc4b8-5c24-4034-8a03-86e707beefd2 IOException:Incomplete message. Expected 25193 more bytes, but got 230
+2025-02-01T06:50:15.647Z  INFO 1 --- [socket] [ool-1-thread-10] c.e.socket.utils.CustomDeserializer      : Headers:16030100CA010000C60303F50B
+2025-02-01T06:50:15.648Z ERROR 1 --- [socket] [ool-1-thread-10] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.120:61782:8082:abc76a07-0d68-414d-8152-4a4c2c492ce5 IOException:Incomplete message. Expected 62750 more bytes, but got 194
+2025-02-01T08:34:15.331Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 206.168.34.85:39928:8082:2b176e4d-b6b7-4816-8446-ba516147f1cc SocketException:Connection reset
+2025-02-01T08:34:16.723Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 206.168.34.85:39930:8082:7b50098e-6b22-47fb-99c8-fb8d8c13c19c EOFException:Connection closed by client.
+2025-02-01T08:34:23.554Z  INFO 1 --- [socket] [ool-1-thread-11] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-01T08:34:23.558Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 206.168.34.85:39952:8082:e6c49a9e-bb62-4e1c-8d3a-1029d0798859 IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-02-01T08:34:25.191Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 206.168.34.85:42296:8082:dede1d71-086e-451c-a248-f820c7c4ab9c SocketException:Connection reset
+2025-02-01T08:34:31.448Z ERROR 1 --- [socket] [ool-1-thread-11] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 206.168.34.85:36660:8082:8c0c3033-51ca-46b2-b107-366d25a723ae IOException:Insufficient data. Expected at least 13 bytes, but got 6
+2025-02-01T14:39:44.695Z  INFO 1 --- [socket] [ool-1-thread-12] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-01T14:39:44.702Z ERROR 1 --- [socket] [ool-1-thread-12] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 51.81.215.65:38661:8082:2dc4c793-c560-4915-8a2b-ad46dc37bb32 IOException:Incomplete message. Expected 12609 more bytes, but got 247
+2025-02-01T18:45:53.803Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : Headers:16030301A5010001A10303A413
+2025-02-01T18:45:53.804Z ERROR 1 --- [socket] [ool-1-thread-13] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 137.74.181.250:39837:8082:b75b4da6-d6b3-48ad-9c5d-acebb27c9b06 IOException:Incomplete message. Expected 42022 more bytes, but got 413
+2025-02-01T18:45:56.965Z  INFO 1 --- [socket] [ool-1-thread-13] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-01T18:45:56.966Z ERROR 1 --- [socket] [ool-1-thread-13] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 137.74.181.255:48329:8082:41e99953-0c92-4b53-ab1e-060aef8b418c IOException:Incomplete message. Expected 12609 more bytes, but got 247
+2025-02-01T21:01:07.147Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.155.94:49514:8082:e86e5406-61c6-4ba7-8aee-81928f9f7b18 SocketException:Connection reset
+2025-02-01T21:01:07.444Z  INFO 1 --- [socket] [ool-1-thread-14] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA03038595
+2025-02-01T21:01:07.445Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.155.94:49518:8082:7fc09abf-1902-47f7-aae4-e54a1504a9e2 IOException:Incomplete message. Expected 34216 more bytes, but got 230
+2025-02-01T21:01:11.289Z  INFO 1 --- [socket] [ool-1-thread-14] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-01T21:01:11.289Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.155.94:49530:8082:f65b9fab-3c7d-4f91-a3b4-c00326d97879 IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-02-01T21:01:11.940Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.155.94:45832:8082:9b0bdf9a-2e68-4d79-948f-05d5dfb00511 SocketException:Connection reset
+2025-02-01T21:01:15.393Z  INFO 1 --- [socket] [ool-1-thread-14] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-01T21:01:15.393Z ERROR 1 --- [socket] [ool-1-thread-14] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 199.45.155.94:45844:8082:36ecc8bc-7a22-4aff-a2b2-137b324db149 IOException:Incomplete message. Expected 12609 more bytes, but got 145
+2025-02-02T02:36:45.710Z ERROR 1 --- [socket] [ool-1-thread-15] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.145.98:38066:8082:e30c770b-71a7-4362-87bd-d2c39ce618a5 SocketException:Connection reset
+2025-02-02T02:36:45.756Z  INFO 1 --- [socket] [ool-1-thread-15] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA030365F6
+2025-02-02T02:36:45.756Z ERROR 1 --- [socket] [ool-1-thread-15] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.145.98:38172:8082:0580ec44-8cae-4e75-b717-5bd4d8ebbed8 IOException:Incomplete message. Expected 26121 more bytes, but got 230
+2025-02-02T02:36:48.933Z  INFO 1 --- [socket] [ool-1-thread-15] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-02T02:36:48.933Z ERROR 1 --- [socket] [ool-1-thread-15] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.145.98:38186:8082:745546d8-aed0-4a10-a777-4ec862d7e688 IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-02-02T02:36:49.079Z ERROR 1 --- [socket] [ool-1-thread-15] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.145.98:38254:8082:e1538684-7b59-452a-a953-f867ed9451aa SocketException:Connection reset
+2025-02-02T02:36:52.210Z  INFO 1 --- [socket] [ool-1-thread-15] c.e.socket.utils.CustomDeserializer      : Headers:80000028CAFECAFE0000000000
+2025-02-02T02:36:52.211Z  INFO 1 --- [socket] [ool-1-thread-15] c.e.socket.utils.CustomDeserializer      : All Message:80000028CAFECAFE0000000000000002000186A5000000030000000500000000
+2025-02-02T02:36:52.212Z  INFO 1 --- [socket] [ool-1-thread-15] c.example.socket.TcpIntegrationConfig    : ПЛохо
+2025-02-02T02:37:22.214Z ERROR 1 --- [socket] [ool-1-thread-15] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 167.94.145.98:49294:8082:15fd5c3d-b061-4392-bd96-316caf213733 SocketException:Connection reset
+2025-02-02T07:01:03.733Z  INFO 1 --- [socket] [ool-1-thread-16] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA030306CD
+2025-02-02T07:01:03.733Z ERROR 1 --- [socket] [ool-1-thread-16] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 205.210.31.199:63238:8082:357c14d4-9188-4a87-9cf1-3dad03ae6a3f IOException:Incomplete message. Expected 1760 more bytes, but got 230
+2025-02-02T07:01:04.183Z  INFO 1 --- [socket] [ool-1-thread-16] c.e.socket.utils.CustomDeserializer      : Headers:16030100CA010000C603033BB2
+2025-02-02T07:01:04.184Z ERROR 1 --- [socket] [ool-1-thread-16] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 205.210.31.199:63244:8082:af45fa7c-d222-4958-9ed2-37c78c64db61 IOException:Incomplete message. Expected 15301 more bytes, but got 194
+2025-02-02T09:50:14.263Z  INFO 1 --- [socket] [ool-1-thread-17] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-02T09:50:14.263Z ERROR 1 --- [socket] [ool-1-thread-17] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 109.205.213.198:36766:8082:0c8bc8e1-b01b-40fa-a30b-46e9bb8fd71b IOException:Incomplete message. Expected 12609 more bytes, but got 410
+2025-02-02T11:06:30.107Z ERROR 1 --- [socket] [ool-1-thread-18] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 205.210.31.98:52325:8082:26d01d73-b5f7-4985-8f26-cd40404100cd SocketException:Connection reset
+2025-02-02T15:04:35.762Z  INFO 1 --- [socket] [ool-1-thread-19] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-02T15:04:35.762Z ERROR 1 --- [socket] [ool-1-thread-19] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 142.93.217.53:45758:8082:37f0293a-5d0a-46ba-bf74-7605b789afef IOException:Incomplete message. Expected 12609 more bytes, but got 316
+2025-02-02T15:56:45.418Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:57864:8082:4f8531b2-12b5-43b7-9628-5b0cb428a714 SocketException:Connection reset
+2025-02-02T15:56:46.242Z  INFO 1 --- [socket] [ool-1-thread-20] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA0303FB0C
+2025-02-02T15:56:46.242Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:57892:8082:a4cf6127-3b0e-4c6b-879c-0120a02f36bd IOException:Incomplete message. Expected 64287 more bytes, but got 230
+2025-02-02T15:56:52.298Z  INFO 1 --- [socket] [ool-1-thread-20] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-02T15:56:52.299Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:57910:8082:ff86155e-9e01-4c39-9290-78c4066526ea IOException:Incomplete message. Expected 12609 more bytes, but got 30
+2025-02-02T15:56:53.745Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:47818:8082:ff09a6b7-6b64-45f4-845c-f9a1ee91acc7 SocketException:Connection reset
+2025-02-02T15:57:00.610Z  INFO 1 --- [socket] [ool-1-thread-20] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA0303C7CC
+2025-02-02T15:57:00.611Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:47850:8082:3ed9bb18-e271-4b48-b09a-58280c89e05a IOException:Incomplete message. Expected 51167 more bytes, but got 230
+2025-02-02T15:57:02.883Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:37046:8082:8cd22fef-f109-48b1-949c-a1d0c1988723 EOFException:Connection closed by client.
+2025-02-02T15:57:03.652Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:37048:8082:c1cee05d-c4f7-4aea-af49-775fd41e9c05 IOException:Insufficient data. Expected at least 13 bytes, but got 9
+2025-02-02T15:57:05.178Z  INFO 1 --- [socket] [ool-1-thread-20] c.e.socket.utils.CustomDeserializer      : Headers:80100000000000000000000000
+2025-02-02T15:57:05.179Z ERROR 1 --- [socket] [ool-1-thread-20] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 162.142.125.39:37058:8082:e6e40ff7-e2aa-4bb2-be31-fa70dbc2f5cb IOException:Incomplete message. Expected 19 more bytes, but got 11
+2025-02-02T18:10:33.103Z  INFO 1 --- [socket] [ool-1-thread-21] c.e.socket.utils.CustomDeserializer      : Headers:16030100EE010000EA0303E6A4
+2025-02-02T18:10:33.104Z ERROR 1 --- [socket] [ool-1-thread-21] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.244:57882:8082:dd66350c-cf13-4439-bbaa-460b4bf1a13c IOException:Incomplete message. Expected 59063 more bytes, but got 230
+2025-02-02T18:10:33.191Z  INFO 1 --- [socket] [ool-1-thread-21] c.e.socket.utils.CustomDeserializer      : Headers:16030100CA010000C60303D031
+2025-02-02T18:10:33.191Z ERROR 1 --- [socket] [ool-1-thread-21] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 198.235.24.244:57892:8082:20c921ef-ee70-4f28-85ed-e2d7c07a364c IOException:Incomplete message. Expected 53316 more bytes, but got 194
+2025-02-02T19:14:12.618Z  INFO 1 --- [socket] [ool-1-thread-22] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-02T19:14:12.618Z ERROR 1 --- [socket] [ool-1-thread-22] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 40.83.133.10:54960:8082:04946151-89f9-49da-9463-e01331f8c0fd IOException:Incomplete message. Expected 12609 more bytes, but got 101
+2025-02-03T06:24:57.169Z ERROR 1 --- [socket] [ool-1-thread-24] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 147.185.132.61:52541:8082:719c549e-873e-4f79-8820-ce50f7c41a24 SocketException:Connection reset
+2025-02-03T07:38:25.838Z  INFO 1 --- [socket] [ool-1-thread-25] c.e.socket.utils.CustomDeserializer      : Headers:474554202F20485454502F312E
+2025-02-03T07:38:25.846Z ERROR 1 --- [socket] [ool-1-thread-25] o.s.i.i.tcp.connection.TcpNetConnection  : Read exception 109.205.213.198:57676:8082:bab0fbf2-a15a-4f6b-87a5-6bce5ca93c53 IOException:Incomplete message. Expected 12609 more bytes, but got 410
+
